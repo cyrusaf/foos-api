@@ -1,0 +1,43 @@
+syntax = "proto3";
+package foos;
+
+service Foos {
+    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+    rpc GetUsers(GetUsersRequest) returns (GetUsersResponse);
+    rpc InputGame(InputGameRequest) returns (InputGameResponse);
+    rpc GetGamesForUser(GetGamesForUserRequest) returns (GetGamesForUserResponse);
+}
+
+message User {
+    string id = 1;
+    string name = 2;
+    float rating = 3;
+}
+message Game {}
+
+message CreateUserRequest {
+    string name = 1;
+}
+message CreateUserResponse {
+    User user = 1;
+}
+
+message GetUsersRequest {}
+message GetUsersResponse {
+    repeated User users = 1;
+}
+
+message InputGameRequest {
+    repeated string winners = 1;
+    repeated string losers = 2;
+    int32 winning_score = 3;
+    int32 losing_score = 4;
+}
+message InputGameResponse {}
+
+message GetGamesForUserRequest {
+    string user_id = 1;
+}
+message GetGamesForUserResponse {
+    repeated Game games = 1;
+}
