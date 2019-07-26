@@ -253,21 +253,38 @@ class TwirpWSGIApp(object):
 
 
 class FoosImpl(object):
-    def CreateUser(self, create_user_request, ctx={}):
+    def CreatePlayer(self, create_player_request, ctx={}):
+        """
+        Player RPCs
+        """
         raise TwirpServerException(Errors.Unimplemented,
-                                   "CreateUser is unimplemented")
+                                   "CreatePlayer is unimplemented")
 
-    def GetUsers(self, get_users_request, ctx={}):
+    def GetPlayers(self, get_players_request, ctx={}):
         raise TwirpServerException(Errors.Unimplemented,
-                                   "GetUsers is unimplemented")
+                                   "GetPlayers is unimplemented")
 
     def InputGame(self, input_game_request, ctx={}):
+        """
+        Game RPCs
+        """
         raise TwirpServerException(Errors.Unimplemented,
                                    "InputGame is unimplemented")
 
-    def GetGamesForUser(self, get_games_for_user_request, ctx={}):
+    def GetGamesForPlayer(self, get_games_for_player_request, ctx={}):
         raise TwirpServerException(Errors.Unimplemented,
-                                   "GetGamesForUser is unimplemented")
+                                   "GetGamesForPlayer is unimplemented")
+
+    def CreateLeague(self, create_league_request, ctx={}):
+        """
+        League RPCs
+        """
+        raise TwirpServerException(Errors.Unimplemented,
+                                   "CreateLeague is unimplemented")
+
+    def GetLeagues(self, get_leagues_request, ctx={}):
+        raise TwirpServerException(Errors.Unimplemented,
+                                   "GetLeagues is unimplemented")
 
 
 class FoosServer(TwirpWSGIApp):
@@ -285,17 +302,17 @@ class FoosServer(TwirpWSGIApp):
         self._prefix = "/twirp/" + self._service_name
 
         self._endpoints = {
-            "CreateUser": Endpoint(
-                name="CreateUser",
-                function=getattr(service, "CreateUser"),
-                input=_sym_lookup("foos.CreateUserRequest"),
-                output=_sym_lookup("foos.CreateUserResponse"),
+            "CreatePlayer": Endpoint(
+                name="CreatePlayer",
+                function=getattr(service, "CreatePlayer"),
+                input=_sym_lookup("foos.CreatePlayerRequest"),
+                output=_sym_lookup("foos.CreatePlayerResponse"),
             ),
-            "GetUsers": Endpoint(
-                name="GetUsers",
-                function=getattr(service, "GetUsers"),
-                input=_sym_lookup("foos.GetUsersRequest"),
-                output=_sym_lookup("foos.GetUsersResponse"),
+            "GetPlayers": Endpoint(
+                name="GetPlayers",
+                function=getattr(service, "GetPlayers"),
+                input=_sym_lookup("foos.GetPlayersRequest"),
+                output=_sym_lookup("foos.GetPlayersResponse"),
             ),
             "InputGame": Endpoint(
                 name="InputGame",
@@ -303,11 +320,23 @@ class FoosServer(TwirpWSGIApp):
                 input=_sym_lookup("foos.InputGameRequest"),
                 output=_sym_lookup("foos.InputGameResponse"),
             ),
-            "GetGamesForUser": Endpoint(
-                name="GetGamesForUser",
-                function=getattr(service, "GetGamesForUser"),
-                input=_sym_lookup("foos.GetGamesForUserRequest"),
-                output=_sym_lookup("foos.GetGamesForUserResponse"),
+            "GetGamesForPlayer": Endpoint(
+                name="GetGamesForPlayer",
+                function=getattr(service, "GetGamesForPlayer"),
+                input=_sym_lookup("foos.GetGamesForPlayerRequest"),
+                output=_sym_lookup("foos.GetGamesForPlayerResponse"),
+            ),
+            "CreateLeague": Endpoint(
+                name="CreateLeague",
+                function=getattr(service, "CreateLeague"),
+                input=_sym_lookup("foos.CreateLeagueRequest"),
+                output=_sym_lookup("foos.CreateLeagueResponse"),
+            ),
+            "GetLeagues": Endpoint(
+                name="GetLeagues",
+                function=getattr(service, "GetLeagues"),
+                input=_sym_lookup("foos.GetLeaguesRequest"),
+                output=_sym_lookup("foos.GetLeaguesResponse"),
             ),
         }
 

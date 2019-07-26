@@ -20,35 +20,35 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='foos',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x10twirp/foos.proto\x12\x04\x66oos\"0\n\x04User\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06rating\x18\x03 \x01(\x02\"\x06\n\x04Game\"!\n\x11\x43reateUserRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\".\n\x12\x43reateUserResponse\x12\x18\n\x04user\x18\x01 \x01(\x0b\x32\n.foos.User\"\x11\n\x0fGetUsersRequest\"-\n\x10GetUsersResponse\x12\x19\n\x05users\x18\x01 \x03(\x0b\x32\n.foos.User\"`\n\x10InputGameRequest\x12\x0f\n\x07winners\x18\x01 \x03(\t\x12\x0e\n\x06losers\x18\x02 \x03(\t\x12\x15\n\rwinning_score\x18\x03 \x01(\x05\x12\x14\n\x0closing_score\x18\x04 \x01(\x05\"\x13\n\x11InputGameResponse\")\n\x16GetGamesForUserRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"4\n\x17GetGamesForUserResponse\x12\x19\n\x05games\x18\x01 \x03(\x0b\x32\n.foos.Game2\x90\x02\n\x04\x46oos\x12?\n\nCreateUser\x12\x17.foos.CreateUserRequest\x1a\x18.foos.CreateUserResponse\x12\x39\n\x08GetUsers\x12\x15.foos.GetUsersRequest\x1a\x16.foos.GetUsersResponse\x12<\n\tInputGame\x12\x16.foos.InputGameRequest\x1a\x17.foos.InputGameResponse\x12N\n\x0fGetGamesForUser\x12\x1c.foos.GetGamesForUserRequest\x1a\x1d.foos.GetGamesForUserResponseb\x06proto3')
+  serialized_pb=_b('\n\x10twirp/foos.proto\x12\x04\x66oos\"2\n\x06Player\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0e\n\x06rating\x18\x03 \x01(\x02\"\x06\n\x04Game\"6\n\x06League\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x12\n\nplayer_ids\x18\x03 \x03(\t\"6\n\x13\x43reatePlayerRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tleague_id\x18\x02 \x01(\t\"4\n\x14\x43reatePlayerResponse\x12\x1c\n\x06player\x18\x01 \x01(\x0b\x32\x0c.foos.Player\"\x13\n\x11GetPlayersRequest\"3\n\x12GetPlayersResponse\x12\x1d\n\x07players\x18\x01 \x03(\x0b\x32\x0c.foos.Player\"`\n\x10InputGameRequest\x12\x0f\n\x07winners\x18\x01 \x03(\t\x12\x0e\n\x06losers\x18\x02 \x03(\t\x12\x15\n\rwinning_score\x18\x03 \x01(\x05\x12\x14\n\x0closing_score\x18\x04 \x01(\x05\"\x13\n\x11InputGameResponse\"-\n\x18GetGamesForPlayerRequest\x12\x11\n\tplayer_id\x18\x01 \x01(\t\"6\n\x19GetGamesForPlayerResponse\x12\x19\n\x05games\x18\x01 \x03(\x0b\x32\n.foos.Game\"#\n\x13\x43reateLeagueRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"4\n\x14\x43reateLeagueResponse\x12\x1c\n\x06league\x18\x01 \x01(\x0b\x32\x0c.foos.League\"\x13\n\x11GetLeaguesRequest\"3\n\x12GetLeaguesResponse\x12\x1d\n\x07leagues\x18\x01 \x03(\x0b\x32\x0c.foos.League2\xaa\x03\n\x04\x46oos\x12\x45\n\x0c\x43reatePlayer\x12\x19.foos.CreatePlayerRequest\x1a\x1a.foos.CreatePlayerResponse\x12?\n\nGetPlayers\x12\x17.foos.GetPlayersRequest\x1a\x18.foos.GetPlayersResponse\x12<\n\tInputGame\x12\x16.foos.InputGameRequest\x1a\x17.foos.InputGameResponse\x12T\n\x11GetGamesForPlayer\x12\x1e.foos.GetGamesForPlayerRequest\x1a\x1f.foos.GetGamesForPlayerResponse\x12\x45\n\x0c\x43reateLeague\x12\x19.foos.CreateLeagueRequest\x1a\x1a.foos.CreateLeagueResponse\x12?\n\nGetLeagues\x12\x17.foos.GetLeaguesRequest\x1a\x18.foos.GetLeaguesResponseb\x06proto3')
 )
 
 
 
 
-_USER = _descriptor.Descriptor(
-  name='User',
-  full_name='foos.User',
+_PLAYER = _descriptor.Descriptor(
+  name='Player',
+  full_name='foos.Player',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='foos.User.id', index=0,
+      name='id', full_name='foos.Player.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='name', full_name='foos.User.name', index=1,
+      name='name', full_name='foos.Player.name', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='rating', full_name='foos.User.rating', index=2,
+      name='rating', full_name='foos.Player.rating', index=2,
       number=3, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -67,7 +67,7 @@ _USER = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=26,
-  serialized_end=74,
+  serialized_end=76,
 )
 
 
@@ -90,21 +90,73 @@ _GAME = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=76,
-  serialized_end=82,
+  serialized_start=78,
+  serialized_end=84,
 )
 
 
-_CREATEUSERREQUEST = _descriptor.Descriptor(
-  name='CreateUserRequest',
-  full_name='foos.CreateUserRequest',
+_LEAGUE = _descriptor.Descriptor(
+  name='League',
+  full_name='foos.League',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='foos.CreateUserRequest.name', index=0,
+      name='id', full_name='foos.League.id', index=0,
       number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='name', full_name='foos.League.name', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='player_ids', full_name='foos.League.player_ids', index=2,
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=86,
+  serialized_end=140,
+)
+
+
+_CREATEPLAYERREQUEST = _descriptor.Descriptor(
+  name='CreatePlayerRequest',
+  full_name='foos.CreatePlayerRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='foos.CreatePlayerRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='league_id', full_name='foos.CreatePlayerRequest.league_id', index=1,
+      number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -121,20 +173,20 @@ _CREATEUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=84,
-  serialized_end=117,
+  serialized_start=142,
+  serialized_end=196,
 )
 
 
-_CREATEUSERRESPONSE = _descriptor.Descriptor(
-  name='CreateUserResponse',
-  full_name='foos.CreateUserResponse',
+_CREATEPLAYERRESPONSE = _descriptor.Descriptor(
+  name='CreatePlayerResponse',
+  full_name='foos.CreatePlayerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user', full_name='foos.CreateUserResponse.user', index=0,
+      name='player', full_name='foos.CreatePlayerResponse.player', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -152,14 +204,14 @@ _CREATEUSERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=119,
-  serialized_end=165,
+  serialized_start=198,
+  serialized_end=250,
 )
 
 
-_GETUSERSREQUEST = _descriptor.Descriptor(
-  name='GetUsersRequest',
-  full_name='foos.GetUsersRequest',
+_GETPLAYERSREQUEST = _descriptor.Descriptor(
+  name='GetPlayersRequest',
+  full_name='foos.GetPlayersRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
@@ -176,20 +228,20 @@ _GETUSERSREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=167,
-  serialized_end=184,
+  serialized_start=252,
+  serialized_end=271,
 )
 
 
-_GETUSERSRESPONSE = _descriptor.Descriptor(
-  name='GetUsersResponse',
-  full_name='foos.GetUsersResponse',
+_GETPLAYERSRESPONSE = _descriptor.Descriptor(
+  name='GetPlayersResponse',
+  full_name='foos.GetPlayersResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='users', full_name='foos.GetUsersResponse.users', index=0,
+      name='players', full_name='foos.GetPlayersResponse.players', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -207,8 +259,8 @@ _GETUSERSRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=186,
-  serialized_end=231,
+  serialized_start=273,
+  serialized_end=324,
 )
 
 
@@ -259,8 +311,8 @@ _INPUTGAMEREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=233,
-  serialized_end=329,
+  serialized_start=326,
+  serialized_end=422,
 )
 
 
@@ -283,20 +335,20 @@ _INPUTGAMERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=331,
-  serialized_end=350,
+  serialized_start=424,
+  serialized_end=443,
 )
 
 
-_GETGAMESFORUSERREQUEST = _descriptor.Descriptor(
-  name='GetGamesForUserRequest',
-  full_name='foos.GetGamesForUserRequest',
+_GETGAMESFORPLAYERREQUEST = _descriptor.Descriptor(
+  name='GetGamesForPlayerRequest',
+  full_name='foos.GetGamesForPlayerRequest',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='user_id', full_name='foos.GetGamesForUserRequest.user_id', index=0,
+      name='player_id', full_name='foos.GetGamesForPlayerRequest.player_id', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -314,20 +366,20 @@ _GETGAMESFORUSERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=352,
-  serialized_end=393,
+  serialized_start=445,
+  serialized_end=490,
 )
 
 
-_GETGAMESFORUSERRESPONSE = _descriptor.Descriptor(
-  name='GetGamesForUserResponse',
-  full_name='foos.GetGamesForUserResponse',
+_GETGAMESFORPLAYERRESPONSE = _descriptor.Descriptor(
+  name='GetGamesForPlayerResponse',
+  full_name='foos.GetGamesForPlayerResponse',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='games', full_name='foos.GetGamesForUserResponse.games', index=0,
+      name='games', full_name='foos.GetGamesForPlayerResponse.games', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -345,31 +397,155 @@ _GETGAMESFORUSERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=395,
-  serialized_end=447,
+  serialized_start=492,
+  serialized_end=546,
 )
 
-_CREATEUSERRESPONSE.fields_by_name['user'].message_type = _USER
-_GETUSERSRESPONSE.fields_by_name['users'].message_type = _USER
-_GETGAMESFORUSERRESPONSE.fields_by_name['games'].message_type = _GAME
-DESCRIPTOR.message_types_by_name['User'] = _USER
+
+_CREATELEAGUEREQUEST = _descriptor.Descriptor(
+  name='CreateLeagueRequest',
+  full_name='foos.CreateLeagueRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='foos.CreateLeagueRequest.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=548,
+  serialized_end=583,
+)
+
+
+_CREATELEAGUERESPONSE = _descriptor.Descriptor(
+  name='CreateLeagueResponse',
+  full_name='foos.CreateLeagueResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='league', full_name='foos.CreateLeagueResponse.league', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=585,
+  serialized_end=637,
+)
+
+
+_GETLEAGUESREQUEST = _descriptor.Descriptor(
+  name='GetLeaguesRequest',
+  full_name='foos.GetLeaguesRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=639,
+  serialized_end=658,
+)
+
+
+_GETLEAGUESRESPONSE = _descriptor.Descriptor(
+  name='GetLeaguesResponse',
+  full_name='foos.GetLeaguesResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='leagues', full_name='foos.GetLeaguesResponse.leagues', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=660,
+  serialized_end=711,
+)
+
+_CREATEPLAYERRESPONSE.fields_by_name['player'].message_type = _PLAYER
+_GETPLAYERSRESPONSE.fields_by_name['players'].message_type = _PLAYER
+_GETGAMESFORPLAYERRESPONSE.fields_by_name['games'].message_type = _GAME
+_CREATELEAGUERESPONSE.fields_by_name['league'].message_type = _LEAGUE
+_GETLEAGUESRESPONSE.fields_by_name['leagues'].message_type = _LEAGUE
+DESCRIPTOR.message_types_by_name['Player'] = _PLAYER
 DESCRIPTOR.message_types_by_name['Game'] = _GAME
-DESCRIPTOR.message_types_by_name['CreateUserRequest'] = _CREATEUSERREQUEST
-DESCRIPTOR.message_types_by_name['CreateUserResponse'] = _CREATEUSERRESPONSE
-DESCRIPTOR.message_types_by_name['GetUsersRequest'] = _GETUSERSREQUEST
-DESCRIPTOR.message_types_by_name['GetUsersResponse'] = _GETUSERSRESPONSE
+DESCRIPTOR.message_types_by_name['League'] = _LEAGUE
+DESCRIPTOR.message_types_by_name['CreatePlayerRequest'] = _CREATEPLAYERREQUEST
+DESCRIPTOR.message_types_by_name['CreatePlayerResponse'] = _CREATEPLAYERRESPONSE
+DESCRIPTOR.message_types_by_name['GetPlayersRequest'] = _GETPLAYERSREQUEST
+DESCRIPTOR.message_types_by_name['GetPlayersResponse'] = _GETPLAYERSRESPONSE
 DESCRIPTOR.message_types_by_name['InputGameRequest'] = _INPUTGAMEREQUEST
 DESCRIPTOR.message_types_by_name['InputGameResponse'] = _INPUTGAMERESPONSE
-DESCRIPTOR.message_types_by_name['GetGamesForUserRequest'] = _GETGAMESFORUSERREQUEST
-DESCRIPTOR.message_types_by_name['GetGamesForUserResponse'] = _GETGAMESFORUSERRESPONSE
+DESCRIPTOR.message_types_by_name['GetGamesForPlayerRequest'] = _GETGAMESFORPLAYERREQUEST
+DESCRIPTOR.message_types_by_name['GetGamesForPlayerResponse'] = _GETGAMESFORPLAYERRESPONSE
+DESCRIPTOR.message_types_by_name['CreateLeagueRequest'] = _CREATELEAGUEREQUEST
+DESCRIPTOR.message_types_by_name['CreateLeagueResponse'] = _CREATELEAGUERESPONSE
+DESCRIPTOR.message_types_by_name['GetLeaguesRequest'] = _GETLEAGUESREQUEST
+DESCRIPTOR.message_types_by_name['GetLeaguesResponse'] = _GETLEAGUESRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-User = _reflection.GeneratedProtocolMessageType('User', (_message.Message,), dict(
-  DESCRIPTOR = _USER,
+Player = _reflection.GeneratedProtocolMessageType('Player', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYER,
   __module__ = 'twirp.foos_pb2'
-  # @@protoc_insertion_point(class_scope:foos.User)
+  # @@protoc_insertion_point(class_scope:foos.Player)
   ))
-_sym_db.RegisterMessage(User)
+_sym_db.RegisterMessage(Player)
 
 Game = _reflection.GeneratedProtocolMessageType('Game', (_message.Message,), dict(
   DESCRIPTOR = _GAME,
@@ -378,33 +554,40 @@ Game = _reflection.GeneratedProtocolMessageType('Game', (_message.Message,), dic
   ))
 _sym_db.RegisterMessage(Game)
 
-CreateUserRequest = _reflection.GeneratedProtocolMessageType('CreateUserRequest', (_message.Message,), dict(
-  DESCRIPTOR = _CREATEUSERREQUEST,
+League = _reflection.GeneratedProtocolMessageType('League', (_message.Message,), dict(
+  DESCRIPTOR = _LEAGUE,
   __module__ = 'twirp.foos_pb2'
-  # @@protoc_insertion_point(class_scope:foos.CreateUserRequest)
+  # @@protoc_insertion_point(class_scope:foos.League)
   ))
-_sym_db.RegisterMessage(CreateUserRequest)
+_sym_db.RegisterMessage(League)
 
-CreateUserResponse = _reflection.GeneratedProtocolMessageType('CreateUserResponse', (_message.Message,), dict(
-  DESCRIPTOR = _CREATEUSERRESPONSE,
+CreatePlayerRequest = _reflection.GeneratedProtocolMessageType('CreatePlayerRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CREATEPLAYERREQUEST,
   __module__ = 'twirp.foos_pb2'
-  # @@protoc_insertion_point(class_scope:foos.CreateUserResponse)
+  # @@protoc_insertion_point(class_scope:foos.CreatePlayerRequest)
   ))
-_sym_db.RegisterMessage(CreateUserResponse)
+_sym_db.RegisterMessage(CreatePlayerRequest)
 
-GetUsersRequest = _reflection.GeneratedProtocolMessageType('GetUsersRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETUSERSREQUEST,
+CreatePlayerResponse = _reflection.GeneratedProtocolMessageType('CreatePlayerResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CREATEPLAYERRESPONSE,
   __module__ = 'twirp.foos_pb2'
-  # @@protoc_insertion_point(class_scope:foos.GetUsersRequest)
+  # @@protoc_insertion_point(class_scope:foos.CreatePlayerResponse)
   ))
-_sym_db.RegisterMessage(GetUsersRequest)
+_sym_db.RegisterMessage(CreatePlayerResponse)
 
-GetUsersResponse = _reflection.GeneratedProtocolMessageType('GetUsersResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETUSERSRESPONSE,
+GetPlayersRequest = _reflection.GeneratedProtocolMessageType('GetPlayersRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETPLAYERSREQUEST,
   __module__ = 'twirp.foos_pb2'
-  # @@protoc_insertion_point(class_scope:foos.GetUsersResponse)
+  # @@protoc_insertion_point(class_scope:foos.GetPlayersRequest)
   ))
-_sym_db.RegisterMessage(GetUsersResponse)
+_sym_db.RegisterMessage(GetPlayersRequest)
+
+GetPlayersResponse = _reflection.GeneratedProtocolMessageType('GetPlayersResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETPLAYERSRESPONSE,
+  __module__ = 'twirp.foos_pb2'
+  # @@protoc_insertion_point(class_scope:foos.GetPlayersResponse)
+  ))
+_sym_db.RegisterMessage(GetPlayersResponse)
 
 InputGameRequest = _reflection.GeneratedProtocolMessageType('InputGameRequest', (_message.Message,), dict(
   DESCRIPTOR = _INPUTGAMEREQUEST,
@@ -420,19 +603,47 @@ InputGameResponse = _reflection.GeneratedProtocolMessageType('InputGameResponse'
   ))
 _sym_db.RegisterMessage(InputGameResponse)
 
-GetGamesForUserRequest = _reflection.GeneratedProtocolMessageType('GetGamesForUserRequest', (_message.Message,), dict(
-  DESCRIPTOR = _GETGAMESFORUSERREQUEST,
+GetGamesForPlayerRequest = _reflection.GeneratedProtocolMessageType('GetGamesForPlayerRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETGAMESFORPLAYERREQUEST,
   __module__ = 'twirp.foos_pb2'
-  # @@protoc_insertion_point(class_scope:foos.GetGamesForUserRequest)
+  # @@protoc_insertion_point(class_scope:foos.GetGamesForPlayerRequest)
   ))
-_sym_db.RegisterMessage(GetGamesForUserRequest)
+_sym_db.RegisterMessage(GetGamesForPlayerRequest)
 
-GetGamesForUserResponse = _reflection.GeneratedProtocolMessageType('GetGamesForUserResponse', (_message.Message,), dict(
-  DESCRIPTOR = _GETGAMESFORUSERRESPONSE,
+GetGamesForPlayerResponse = _reflection.GeneratedProtocolMessageType('GetGamesForPlayerResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETGAMESFORPLAYERRESPONSE,
   __module__ = 'twirp.foos_pb2'
-  # @@protoc_insertion_point(class_scope:foos.GetGamesForUserResponse)
+  # @@protoc_insertion_point(class_scope:foos.GetGamesForPlayerResponse)
   ))
-_sym_db.RegisterMessage(GetGamesForUserResponse)
+_sym_db.RegisterMessage(GetGamesForPlayerResponse)
+
+CreateLeagueRequest = _reflection.GeneratedProtocolMessageType('CreateLeagueRequest', (_message.Message,), dict(
+  DESCRIPTOR = _CREATELEAGUEREQUEST,
+  __module__ = 'twirp.foos_pb2'
+  # @@protoc_insertion_point(class_scope:foos.CreateLeagueRequest)
+  ))
+_sym_db.RegisterMessage(CreateLeagueRequest)
+
+CreateLeagueResponse = _reflection.GeneratedProtocolMessageType('CreateLeagueResponse', (_message.Message,), dict(
+  DESCRIPTOR = _CREATELEAGUERESPONSE,
+  __module__ = 'twirp.foos_pb2'
+  # @@protoc_insertion_point(class_scope:foos.CreateLeagueResponse)
+  ))
+_sym_db.RegisterMessage(CreateLeagueResponse)
+
+GetLeaguesRequest = _reflection.GeneratedProtocolMessageType('GetLeaguesRequest', (_message.Message,), dict(
+  DESCRIPTOR = _GETLEAGUESREQUEST,
+  __module__ = 'twirp.foos_pb2'
+  # @@protoc_insertion_point(class_scope:foos.GetLeaguesRequest)
+  ))
+_sym_db.RegisterMessage(GetLeaguesRequest)
+
+GetLeaguesResponse = _reflection.GeneratedProtocolMessageType('GetLeaguesResponse', (_message.Message,), dict(
+  DESCRIPTOR = _GETLEAGUESRESPONSE,
+  __module__ = 'twirp.foos_pb2'
+  # @@protoc_insertion_point(class_scope:foos.GetLeaguesResponse)
+  ))
+_sym_db.RegisterMessage(GetLeaguesResponse)
 
 
 
@@ -442,25 +653,25 @@ _FOOS = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=450,
-  serialized_end=722,
+  serialized_start=714,
+  serialized_end=1140,
   methods=[
   _descriptor.MethodDescriptor(
-    name='CreateUser',
-    full_name='foos.Foos.CreateUser',
+    name='CreatePlayer',
+    full_name='foos.Foos.CreatePlayer',
     index=0,
     containing_service=None,
-    input_type=_CREATEUSERREQUEST,
-    output_type=_CREATEUSERRESPONSE,
+    input_type=_CREATEPLAYERREQUEST,
+    output_type=_CREATEPLAYERRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetUsers',
-    full_name='foos.Foos.GetUsers',
+    name='GetPlayers',
+    full_name='foos.Foos.GetPlayers',
     index=1,
     containing_service=None,
-    input_type=_GETUSERSREQUEST,
-    output_type=_GETUSERSRESPONSE,
+    input_type=_GETPLAYERSREQUEST,
+    output_type=_GETPLAYERSRESPONSE,
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
@@ -473,12 +684,30 @@ _FOOS = _descriptor.ServiceDescriptor(
     serialized_options=None,
   ),
   _descriptor.MethodDescriptor(
-    name='GetGamesForUser',
-    full_name='foos.Foos.GetGamesForUser',
+    name='GetGamesForPlayer',
+    full_name='foos.Foos.GetGamesForPlayer',
     index=3,
     containing_service=None,
-    input_type=_GETGAMESFORUSERREQUEST,
-    output_type=_GETGAMESFORUSERRESPONSE,
+    input_type=_GETGAMESFORPLAYERREQUEST,
+    output_type=_GETGAMESFORPLAYERRESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='CreateLeague',
+    full_name='foos.Foos.CreateLeague',
+    index=4,
+    containing_service=None,
+    input_type=_CREATELEAGUEREQUEST,
+    output_type=_CREATELEAGUERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='GetLeagues',
+    full_name='foos.Foos.GetLeagues',
+    index=5,
+    containing_service=None,
+    input_type=_GETLEAGUESREQUEST,
+    output_type=_GETLEAGUESRESPONSE,
     serialized_options=None,
   ),
 ])

@@ -2,31 +2,53 @@ syntax = "proto3";
 package foos;
 
 service Foos {
-    rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
-    rpc GetUsers(GetUsersRequest) returns (GetUsersResponse);
+
+    // Player RPCs
+    rpc CreatePlayer(CreatePlayerRequest) returns (CreatePlayerResponse);
+    rpc GetPlayers(GetPlayersRequest) returns (GetPlayersResponse);
+
+    // Game RPCs
     rpc InputGame(InputGameRequest) returns (InputGameResponse);
-    rpc GetGamesForUser(GetGamesForUserRequest) returns (GetGamesForUserResponse);
+    rpc GetGamesForPlayer(GetGamesForPlayerRequest) returns (GetGamesForPlayerResponse);
+
+    // League RPCs
+    rpc CreateLeague(CreateLeagueRequest) returns (CreateLeagueResponse);
+    rpc GetLeagues(GetLeaguesRequest) returns (GetLeaguesResponse);
 }
 
-message User {
+// Shared Types
+// =============
+message Player {
     string id = 1;
     string name = 2;
     float rating = 3;
 }
 message Game {}
+message League {
+    string id = 1;
+    string name = 2;
+    repeated string player_ids = 3;
+}
 
-message CreateUserRequest {
+// CreatePlayer
+// =============
+message CreatePlayerRequest {
     string name = 1;
+    string league_id = 2;
 }
-message CreateUserResponse {
-    User user = 1;
-}
-
-message GetUsersRequest {}
-message GetUsersResponse {
-    repeated User users = 1;
+message CreatePlayerResponse {
+    Player player = 1;
 }
 
+// GetPlayers
+// ===========
+message GetPlayersRequest {}
+message GetPlayersResponse {
+    repeated Player players = 1;
+}
+
+// InputGame
+// ==========
 message InputGameRequest {
     repeated string winners = 1;
     repeated string losers = 2;
@@ -35,9 +57,27 @@ message InputGameRequest {
 }
 message InputGameResponse {}
 
-message GetGamesForUserRequest {
-    string user_id = 1;
+// GetGamesForPlayer
+// ==================
+message GetGamesForPlayerRequest {
+    string player_id = 1;
 }
-message GetGamesForUserResponse {
+message GetGamesForPlayerResponse {
     repeated Game games = 1;
+}
+
+// CreateLeague
+// =============
+message CreateLeagueRequest {
+    string name = 1;
+}
+message CreateLeagueResponse {
+    League league = 1;
+} 
+
+// GetLeagues
+// ===========
+message GetLeaguesRequest {}
+message GetLeaguesResponse {
+    repeated League leagues = 1;
 }
